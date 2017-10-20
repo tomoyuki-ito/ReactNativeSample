@@ -49,3 +49,24 @@ react-native run-android
 1. App.jsを開く
 2. importにButtonを追加
 3. render()内に```<Button ~ />```を追加
+
+###ナビゲーション追加
+
+[React Navigaiton](https://reactnavigation.org/docs/intro/)
+
+```
+import { StackNavigator } from 'react-navigation';
+```
+
+```
+export const SimpleApp = StackNavigator({
+  Home: { screen: HomeScreen },
+  Chat: { screen: ChatScreen },
+});
+
+export default class App extends React.Component {
+  render() {
+    return <SimpleApp />;
+  }
+}
+```
