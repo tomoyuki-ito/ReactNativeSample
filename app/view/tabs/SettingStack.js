@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { StackNavigator } from 'react-navigation';
-import SearchScreen from '../screens/SearchScreen';
+import SettingScreen from '../screens/SettingScreen';
 import DetailScreen from '../screens/DetailScreen';
 
-export const SearchStack = StackNavigator({
-  Search: { screen: SearchScreen },
+export const SettingStack = StackNavigator({
+  Mypage: { screen: SettingScreen },
   Detail: { screen: DetailScreen },
 });

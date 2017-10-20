@@ -3,16 +3,7 @@ import { StackNavigator } from 'react-navigation';
 import MypageScreen from '../screens/MypageScreen';
 import DetailScreen from '../screens/DetailScreen';
 
-const Navi = StackNavigator({
+export const MypageStack = StackNavigator({
   Mypage: { screen: MypageScreen },
   Detail: { screen: DetailScreen },
 });
-
-export default class MypageStack extends Component {
-  static navigationOptions = {
-    tabBarLabel: 'マイページ',
-  };
-  render() {
-    return <Navi />;
-  }
-}

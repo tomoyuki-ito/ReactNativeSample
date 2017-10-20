@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
+import { StackNavigator, NavigationActions } from 'react-navigation';
 
-export default class MypageScreen extends Component {
+export default class SettingScreen extends Component {
   static navigationOptions = {
-    title: 'マイページ',
-    headerRight: <Button title="設定"/>
+    title: '設定'
   };
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View>
-        <Text>マイページ画面です</Text>
+        <Text>設定画面です</Text>
         <Button
           onPress={() => navigate('Detail')}
           title="詳細へ"
         />
         <Button
-          onPress={() => navigate('SettingStack')}
-          title="設定へ"
+          onPress={() => this.props.navigation.dispatch(NavigationActions.back())}
+          title="閉じる"
         />
       </View>
     );
