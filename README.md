@@ -70,3 +70,14 @@ export default class App extends React.Component {
   }
 }
 ```
+
+###ファイル分割
+
+```
+import HomeScreen from './HomeScreen';
+```
+
+```
+export default class HomeScreen extends React.Component {
+}
+```
